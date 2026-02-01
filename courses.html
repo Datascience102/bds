@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - BigDataSchool</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-primary" href="index.html">
+                <i class="fas fa-database me-2"></i>BigDataSchool
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="courses.html">Courses</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="workshops.html">Workshops</a>
+                    </li>
+                </ul>
+                <div class="d-flex">
+                    <button class="btn btn-outline-primary me-2">Sign In</button>
+                    <button class="btn btn-primary">Join Free</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Header -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="index.html" class="text-decoration-none">Home</a></li>
+                    <li class="breadcrumb-item active" aria-current="page"><strong>Courses</strong></li>
+                </ol>
+            </nav>
+            <div class="row">
+                <div class="col-lg-8">
+                    <h1 class="display-5 fw-bold text-dark">Explore Our Courses</h1>
+                    <p class="lead text-muted">Discover courses designed by industry experts to help you master data science, big data, and analytics.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Filters and Search -->
+    <section class="py-4 border-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <div class="input-group">
+                        <span class="input-group-text"><i class="fas fa-search"></i></span>
+                        <input type="text" class="form-control" placeholder="Search courses...">
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="d-flex gap-3 mt-3 mt-lg-0">
+                        <select class="form-select">
+                            <option>All Levels</option>
+                            <option>Beginner</option>
+                            <option>Intermediate</option>
+                            <option>Advanced</option>
+                        </select>
+                        <select class="form-select">
+                            <option>All Categories</option>
+                            <option>Data Science</option>
+                            <option>Machine Learning</option>
+                            <option>Big Data</option>
+                            <option>Analytics</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Course Categories -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row g-4 mb-5">
+                <div class="col-lg-3 col-md-6">
+                    <div class="card category-card text-center h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="icon-circle bg-primary text-white mb-3 mx-auto">
+                                <i class="fas fa-python"></i>
+                            </div>
+                            <h5 class="card-title">Data Science</h5>
+                            <p class="card-text text-muted">25 Courses</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card category-card text-center h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="icon-circle bg-success text-white mb-3 mx-auto">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <h5 class="card-title">Machine Learning</h5>
+                            <p class="card-text text-muted">18 Courses</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card category-card text-center h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="icon-circle bg-warning text-white mb-3 mx-auto">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <h5 class="card-title">Big Data</h5>
+                            <p class="card-text text-muted">15 Courses</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <div class="card category-card text-center h-100 border-0 shadow-sm">
+                        <div class="card-body p-4">
+                            <div class="icon-circle bg-info text-white mb-3 mx-auto">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <h5 class="card-title">Analytics</h5>
+                            <p class="card-text text-muted">20 Courses</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Courses Grid -->
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h3 class="fw-bold">All Courses</h3>
+                <div class="d-flex align-items-center gap-3">
+                    <span class="text-muted">78 courses</span>
+                    <select class="form-select" style="width: auto;">
+                        <option>Most Popular</option>
+                        <option>Newest</option>
+                        <option>Price: Low to High</option>
+                        <option>Price: High to Low</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="card course-card h-100 shadow-sm">
+                        <img src="https://images.pexels.com/photos/3184338/pexels-photo-3184338.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                             class="card-img-top" alt="Python for Data Science">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-primary mb-2 align-self-start">Beginner</span>
+                            <h5 class="card-title">Python for Data Science</h5>
+                            <p class="card-text text-muted flex-grow-1">Master Python programming for data analysis, visualization, and machine learning applications.</p>
+                            <div class="course-meta mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-clock me-1"></i>40 hours
+                                    <i class="fas fa-users ms-3 me-1"></i>12,450 students
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <small class="text-muted ms-1">(4.9)</small>
+                                </div>
+                                <span class="fw-bold text-primary">$49</span>
+                            </div>
+                            <a href="course-detail.html" class="btn btn-primary mt-3">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card course-card h-100 shadow-sm">
+                        <img src="https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                             class="card-img-top" alt="Machine Learning">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-warning mb-2 align-self-start">Intermediate</span>
+                            <h5 class="card-title">Machine Learning Fundamentals</h5>
+                            <p class="card-text text-muted flex-grow-1">Learn supervised and unsupervised learning algorithms with hands-on projects.</p>
+                            <div class="course-meta mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-clock me-1"></i>60 hours
+                                    <i class="fas fa-users ms-3 me-1"></i>8,230 students
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <small class="text-muted ms-1">(4.8)</small>
+                                </div>
+                                <span class="fw-bold text-primary">$89</span>
+                            </div>
+                            <a href="course-detail.html" class="btn btn-primary mt-3">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card course-card h-100 shadow-sm">
+                        <img src="https://images.pexels.com/photos/3184306/pexels-photo-3184306.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                             class="card-img-top" alt="Big Data">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-danger mb-2 align-self-start">Advanced</span>
+                            <h5 class="card-title">Big Data with Apache Spark</h5>
+                            <p class="card-text text-muted flex-grow-1">Process large datasets efficiently using Apache Spark and distributed computing.</p>
+                            <div class="course-meta mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-clock me-1"></i>80 hours
+                                    <i class="fas fa-users ms-3 me-1"></i>5,120 students
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <small class="text-muted ms-1">(4.7)</small>
+                                </div>
+                                <span class="fw-bold text-primary">$129</span>
+                            </div>
+                            <a href="course-detail.html" class="btn btn-primary mt-3">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card course-card h-100 shadow-sm">
+                        <img src="https://images.pexels.com/photos/3184328/pexels-photo-3184328.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                             class="card-img-top" alt="SQL">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-primary mb-2 align-self-start">Beginner</span>
+                            <h5 class="card-title">SQL for Data Analysis</h5>
+                            <p class="card-text text-muted flex-grow-1">Master SQL queries, joins, and database operations for data analysis.</p>
+                            <div class="course-meta mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-clock me-1"></i>25 hours
+                                    <i class="fas fa-users ms-3 me-1"></i>15,680 students
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <small class="text-muted ms-1">(4.8)</small>
+                                </div>
+                                <span class="fw-bold text-primary">$39</span>
+                            </div>
+                            <a href="course-detail.html" class="btn btn-primary mt-3">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card course-card h-100 shadow-sm">
+                        <img src="https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                             class="card-img-top" alt="Tableau">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-warning mb-2 align-self-start">Intermediate</span>
+                            <h5 class="card-title">Data Visualization with Tableau</h5>
+                            <p class="card-text text-muted flex-grow-1">Create interactive dashboards and compelling visualizations with Tableau.</p>
+                            <div class="course-meta mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-clock me-1"></i>35 hours
+                                    <i class="fas fa-users ms-3 me-1"></i>9,340 students
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <small class="text-muted ms-1">(4.6)</small>
+                                </div>
+                                <span class="fw-bold text-primary">$69</span>
+                            </div>
+                            <a href="course-detail.html" class="btn btn-primary mt-3">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6">
+                    <div class="card course-card h-100 shadow-sm">
+                        <img src="https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=400" 
+                             class="card-img-top" alt="Deep Learning">
+                        <div class="card-body d-flex flex-column">
+                            <span class="badge bg-danger mb-2 align-self-start">Advanced</span>
+                            <h5 class="card-title">Deep Learning with TensorFlow</h5>
+                            <p class="card-text text-muted flex-grow-1">Build neural networks and deep learning models using TensorFlow and Keras.</p>
+                            <div class="course-meta mb-3">
+                                <small class="text-muted">
+                                    <i class="fas fa-clock me-1"></i>75 hours
+                                    <i class="fas fa-users ms-3 me-1"></i>4,890 students
+                                </small>
+                            </div>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="text-warning">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <small class="text-muted ms-1">(4.9)</small>
+                                </div>
+                                <span class="fw-bold text-primary">$149</span>
+                            </div>
+                            <a href="course-detail.html" class="btn btn-primary mt-3">Enroll Now</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <nav class="mt-5">
+                <ul class="pagination justify-content-center">
+                    <li class="page-item disabled">
+                        <a class="page-link" href="#" tabindex="-1">Previous</a>
+                    </li>
+                    <li class="page-item active"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#">Next</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4">
+                    <h5 class="fw-bold mb-3">
+                        <i class="fas fa-database me-2"></i>BigDataSchool
+                    </h5>
+                    <p class="text-muted">Empowering the next generation of data professionals with world-class education and hands-on experience.</p>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Courses</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-muted text-decoration-none">Data Science</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Machine Learning</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Big Data</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Analytics</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Resources</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-muted text-decoration-none">Blog</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Help Center</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Career Guidance</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Community</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Company</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-muted text-decoration-none">About Us</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Careers</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Press</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-2 col-md-6">
+                    <h6 class="fw-bold mb-3">Legal</h6>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-muted text-decoration-none">Terms</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Privacy</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Cookies</a></li>
+                        <li><a href="#" class="text-muted text-decoration-none">Accessibility</a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="text-center text-muted">
+                <p>&copy; 2025 BigDataSchool. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

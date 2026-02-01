@@ -1,0 +1,45 @@
+:root{
+  --primary:#0056D2;
+  --text:#1f2937;
+  --muted:#6b7280;
+  --light:#f8fafc;
+  --dark:#0f172a;
+  --border:#e5e7eb;
+}
+
+body {
+  font-family:'Roboto', sans-serif;
+  color:var(--text);
+  background:#fff;
+}
+
+h1,h2,h3,h4,h5,h6 { font-weight:700; color:#111827; }
+a { color:var(--primary); text-decoration:none; }
+a:hover { color:#003ea3; }
+
+.btn { border-radius:.6rem; font-weight:500; }
+.btn-primary { background:var(--primary); border-color:var(--primary); }
+.btn-outline-primary { border-color:var(--primary); color:var(--primary); }
+.btn-outline-primary:hover { background:var(--primary); color:#fff; }
+
+.hero-section { background:#fff; }
+.hero-section img { border:1px solid var(--border); }
+
+.check-list i { color:var(--primary); }
+
+.card { border-radius:.75rem; border:1px solid var(--border); }
+
+/* Testimonials Carousel */
+#testimonialCarousel .card { min-height:220px; }
+#testimonialCarousel .carousel-control-prev-icon,
+#testimonialCarousel .carousel-control-next-icon {
+  background-color:rgba(0,0,0,0.5);
+  border-radius:50%;
+  width:2rem;
+  height:2rem;
+}
+
+/* Footer */
+.footer { background:#0a0a0a; padding:2rem 0; }
+.footer a { color:#9ca3af; }
+.footer a:hover { color:#fff; }
