@@ -1,45 +1,539 @@
-:root{
-  --primary:#0056D2;
-  --text:#1f2937;
-  --muted:#6b7280;
-  --light:#f8fafc;
-  --dark:#0f172a;
-  --border:#e5e7eb;
+/* ============================================
+   CUSTOM DESIGN SYSTEM
+   ============================================ */
+
+:root {
+  /* Primary Brand Colors */
+  --primary: #0056D2;
+  --primary-light: #3B82F6;
+  --primary-dark: #003EA3;
+  --primary-lighter: #EFF6FF;
+  
+  /* Secondary Color (Accent) */
+  --secondary: #8B5CF6;
+  --secondary-light: #A78BFA;
+  
+  /* Text & Semantic Colors */
+  --text: #1f2937;
+  --text-light: #374151;
+  --text-lighter: #6B7280;
+  --muted: #9CA3AF;
+  --light: #F9FAFB;
+  --lighter: #F3F4F6;
+  --border: #E5E7EB;
+  --dark: #0F172A;
+  
+  /* Status Colors */
+  --success: #10B981;
+  --warning: #F59E0B;
+  --danger: #EF4444;
+  --info: #06B6D4;
+  
+  /* Shadows - Enhanced */
+  --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.05);
+  --shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+  --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.1);
+  --shadow-xl: 0 20px 25px rgba(0, 0, 0, 0.1);
+  --shadow-hover: 0 15px 30px rgba(0, 0, 0, 0.15);
+  
+  /* Transitions */
+  --transition: all 0.3s ease-in-out;
 }
+
+/* ============================================
+   GLOBAL TYPOGRAPHY
+   ============================================ */
 
 body {
-  font-family:'Roboto', sans-serif;
-  color:var(--text);
-  background:#fff;
+  font-family: 'Roboto', sans-serif;
+  color: var(--text);
+  background: #fff;
+  line-height: 1.6;
 }
 
-h1,h2,h3,h4,h5,h6 { font-weight:700; color:#111827; }
-a { color:var(--primary); text-decoration:none; }
-a:hover { color:#003ea3; }
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+}
 
-.btn { border-radius:.6rem; font-weight:500; }
-.btn-primary { background:var(--primary); border-color:var(--primary); }
-.btn-outline-primary { border-color:var(--primary); color:var(--primary); }
-.btn-outline-primary:hover { background:var(--primary); color:#fff; }
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
 
-.hero-section { background:#fff; }
-.hero-section img { border:1px solid var(--border); }
+h2 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+}
 
-.check-list i { color:var(--primary); }
+h3 {
+  font-size: 1.875rem;
+  font-weight: 600;
+}
 
-.card { border-radius:.75rem; border:1px solid var(--border); }
+h4 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
 
-/* Testimonials Carousel */
-#testimonialCarousel .card { min-height:220px; }
+h5 {
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 500;
+  line-height: 1.8;
+  color: var(--text-light);
+}
+
+p {
+  line-height: 1.75;
+}
+
+/* ============================================
+   LINKS & INTERACTIVE ELEMENTS
+   ============================================ */
+
+a {
+  color: var(--primary);
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+a:hover {
+  color: var(--primary-dark);
+  text-decoration: underline;
+}
+
+/* ============================================
+   BUTTONS - ENHANCED
+   ============================================ */
+
+.btn {
+  border-radius: 0.6rem;
+  font-weight: 600;
+  transition: var(--transition);
+  border: 2px solid transparent;
+  padding: 0.6rem 1.5rem;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary) 0%, #003EA3 100%);
+  border-color: var(--primary);
+  color: #fff;
+  box-shadow: var(--shadow-md);
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, var(--primary-dark) 0%, #002975 100%);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-2px);
+}
+
+.btn-outline-primary {
+  border-color: var(--primary);
+  color: var(--primary);
+  background: transparent;
+  transition: var(--transition);
+}
+
+.btn-outline-primary:hover {
+  background: var(--primary);
+  color: #fff;
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-light {
+  background: #fff;
+  color: var(--primary);
+  border-color: #fff;
+}
+
+.btn-light:hover {
+  background: var(--lighter);
+  transform: translateY(-2px);
+}
+
+.btn-outline-light {
+  border-color: #fff;
+  color: #fff;
+}
+
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+}
+
+/* ============================================
+   CARDS - MODERN DESIGN
+   ============================================ */
+
+.card {
+  border-radius: 0.875rem;
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+  overflow: hidden;
+}
+
+.card:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-8px);
+}
+
+.card-body {
+  padding: 1.5rem;
+}
+
+.path-card {
+  cursor: pointer;
+  border: 1px solid var(--border);
+}
+
+.path-card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: var(--primary);
+}
+
+.icon-circle {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+
+.card:hover .icon-circle {
+  transform: scale(1.1) rotate(5deg);
+}
+
+/* ============================================
+   HERO SECTION - MODERN
+   ============================================ */
+
+.hero-section {
+  background: linear-gradient(135deg, #ffffff 0%, var(--light) 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.hero-section img {
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  box-shadow: var(--shadow-lg);
+  transition: var(--transition);
+}
+
+.hero-section img:hover {
+  box-shadow: var(--shadow-xl);
+  transform: scale(1.02);
+}
+
+/* ============================================
+   SECTIONS - BACKGROUND STYLES
+   ============================================ */
+
+.bg-light {
+  background: linear-gradient(180deg, var(--lighter) 0%, #ffffff 100%);
+}
+
+/* ============================================
+   NAVIGATION - ENHANCED
+   ============================================ */
+
+.navbar {
+  background: #fff;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition);
+}
+
+.navbar:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+
+.navbar-brand:hover {
+  color: var(--primary-dark) !important;
+}
+
+.nav-link {
+  font-weight: 500;
+  transition: var(--transition);
+  position: relative;
+}
+
+.nav-link:hover {
+  color: var(--primary) !important;
+}
+
+.nav-link.active {
+  color: var(--primary) !important;
+  font-weight: 600;
+  border-bottom: 3px solid var(--primary);
+}
+
+/* ============================================
+   TESTIMONIALS
+   ============================================ */
+
+#testimonialCarousel .card {
+  min-height: 220px;
+}
+
 #testimonialCarousel .carousel-control-prev-icon,
 #testimonialCarousel .carousel-control-next-icon {
-  background-color:rgba(0,0,0,0.5);
-  border-radius:50%;
-  width:2rem;
-  height:2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  width: 2rem;
+  height: 2rem;
+  transition: var(--transition);
 }
 
-/* Footer */
-.footer { background:#0a0a0a; padding:2rem 0; }
-.footer a { color:#9ca3af; }
-.footer a:hover { color:#fff; }
+#testimonialCarousel .carousel-control-prev-icon:hover,
+#testimonialCarousel .carousel-control-next-icon:hover {
+  background-color: var(--primary);
+  transform: scale(1.1);
+}
+
+/* ============================================
+   FOOTER - MODERN
+   ============================================ */
+
+.footer {
+  background: linear-gradient(180deg, #0F172A 0%, #1F2937 100%);
+  padding: 2rem 0;
+  transition: var(--transition);
+  color: #E5E7EB;
+}
+
+.footer h5,
+.footer h6 {
+  color: #FFFFFF;
+}
+
+.footer p {
+  color: #D1D5DB;
+}
+
+.footer a {
+  color: #F0F9FF;
+  transition: var(--transition);
+  font-weight: 500;
+}
+
+.footer a:hover {
+  color: var(--primary-light);
+  text-decoration: underline;
+}
+
+/* ============================================
+   CHECK LIST
+   ============================================ */
+
+.check-list i {
+  color: var(--primary);
+  font-size: 1.25rem;
+}
+
+/* ============================================
+   UTILITIES & ANIMATIONS
+   ============================================ */
+
+/* Fade In Animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Slide in Animation */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Pulse Animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Apply animations to elements */
+.hero-section h1 {
+  animation: fadeInUp 0.8s ease-out;
+}
+
+.hero-section p {
+  animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.card {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Gradient Text */
+.gradient-text {
+  background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Modern Section Divider */
+section {
+  transition: var(--transition);
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus States for Accessibility */
+button:focus-visible,
+a:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 2px;
+}
+
+/* Enhanced Input Styling */
+.form-control,
+.form-select {
+  border: 1px solid var(--border);
+  border-radius: 0.6rem;
+  transition: var(--transition);
+  font-family: 'Roboto', sans-serif;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(0, 86, 210, 0.1);
+}
+
+/* Badge Styling */
+.badge {
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  transition: var(--transition);
+}
+
+.badge:hover {
+  transform: scale(1.05);
+}
+
+/* Workshop Card Styling */
+.workshop-card {
+  transition: var(--transition);
+}
+
+.workshop-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+/* ============================================
+   FLOATING WHATSAPP BUTTON
+   ============================================ */
+
+.whatsapp-float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25D366;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 30px;
+  z-index: 99999;
+  box-shadow: var(--shadow-xl);
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.whatsapp-float:hover {
+  background-color: #20BA57;
+  transform: scale(1.1) rotate(10deg);
+  box-shadow: 0 20px 40px rgba(37, 211, 102, 0.3);
+}
+
+.whatsapp-float i {
+  font-size: 30px;
+}
+
+@media (max-width: 768px) {
+  .whatsapp-float {
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 24px;
+  }
+  
+  .whatsapp-float i {
+    font-size: 24px;
+  }
+}
