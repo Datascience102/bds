@@ -379,31 +379,48 @@ a:hover {
    FOOTER - MODERN
    ============================================ */
 
-.footer {
-  background: linear-gradient(180deg, #0F172A 0%, #1F2937 100%);
+.footer,
+footer.bg-dark {
+  background-color: #F8FAFC !important;
+  border-top: 1px solid #E5E7EB;
   padding: 2rem 0;
   transition: var(--transition);
-  color: #E5E7EB;
+  color: #111827 !important;
 }
 
 .footer h5,
-.footer h6 {
-  color: #FFFFFF;
+.footer h6,
+footer.bg-dark h5,
+footer.bg-dark h6 {
+  color: #111827 !important;
 }
 
-.footer p {
-  color: #E5E7EB;
+.footer p,
+footer.bg-dark p {
+  color: #4B5563 !important;
 }
 
-.footer a {
-  color: #FCD34D;
+.footer .text-muted,
+footer.bg-dark .text-muted {
+  color: #6B7280 !important;
+}
+
+.footer a,
+footer.bg-dark a {
+  color: var(--primary) !important;
   transition: var(--transition);
   font-weight: 600;
 }
 
-.footer a:hover {
-  color: #FBBF24;
+.footer a:hover,
+footer.bg-dark a:hover {
+  color: #2563EB !important;
   text-decoration: underline;
+}
+
+.footer hr,
+footer.bg-dark hr {
+  border-color: #D1D5DB;
 }
 
 /* ============================================
