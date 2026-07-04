@@ -222,6 +222,36 @@ a:hover {
 }
 
 /* ============================================
+   COURSES PAGE CARDS
+   ============================================ */
+
+.course-item {
+  display: flex;
+}
+
+.course-card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.course-card .card-img-top {
+  height: 220px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.course-card .card-body {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.course-card .btn {
+  margin-top: auto;
+}
+
+/* ============================================
    HERO SECTION - MODERN
    ============================================ */
 
